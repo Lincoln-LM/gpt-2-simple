@@ -138,6 +138,7 @@ def finetune(sess,
              sample_every=100,
              sample_length=1023,
              sample_num=1,
+             sample_dir='samples',
              multi_gpu=False,
              save_every=1000,
              print_every=1,
@@ -155,7 +156,7 @@ def finetune(sess,
 
     # assert model_name not in ['774M', '1558M'] or multi_gpu, "Currently, a modern single GPU cannot finetune the 774M GPT-2 model or larger."
 
-    SAMPLE_DIR = 'samples'
+    SAMPLE_DIR = sample_dir
 
     checkpoint_path = os.path.join(checkpoint_dir, run_name)
 
